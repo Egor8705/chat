@@ -1,0 +1,28 @@
+.messages{
+    width: 700px;
+    height: 700px;
+    overflow-y: scroll;
+    border: 1px solid;
+}
+.sendMessageForm{
+    width: 500px;
+    
+}
+.changeRoomForm{
+    width: 700px;
+}
+.stats{
+    margin-left: 400px;
+}
+.room-class:hover{
+    cursor: pointer;
+    background-color: #5488af;
+}
+.language:hover{
+    cursor: pointer;
+    background-color: #5488af;
+}
+.rooms-list{
+    height: 700px;
+    overflow-y: scroll;
+}

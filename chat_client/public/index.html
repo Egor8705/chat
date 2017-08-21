@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Chat translator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stylesheets/style.css" rel="stylesheet">
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "stats">
+            Current room: <label id = 'roomName' class = 'roomName'>lobby</label><br>
+            Username: <label id = 'userName' class = 'userName'></label><br>
+            Language: <label id = 'language'></label>
+        </div>
+        <div class="container">
+             <div class = "row">
+                 <div class = "col-xs-12 col-md-8">
+                    <div id = 'messages' class = 'messages'></div>
+                 </div>
+                 <div class = "col-xs-12 col-md-2">
+                     <h5>Room list</h5>
+                     <div class = 'rooms-list' id = 'rooms'></div>
+                </div>
+                <div class="col-xs-12 col-md-2">   
+                    <h5>Choose language</h5>
+                    <div class="languages-list-conteiner">
+                      <ul class = "list-unstyled" id = 'langList'></ul>
+                   </div>
+                </div>
+             </div> 
+        </div>
+        <div class="container">
+            <div class = "row">
+                 <div id = 'sendMessageForm' class = 'sendMessageForm col-xs-12 col-md-8'>
+                     <form class = 'form-control'>
+                         <textarea id = 'textMessage' class="form-control" placeholder="Text message" rows = 5></textarea><br>
+                         <button id ="sendMessage" class="btn btn-success">Send message </button>
+                     </form>
+                 </div>
+                 <div id = 'changeRoomForm' class = 'changeRoomForm col-xs-12 col-md-4'>
+                    <form class = 'form-control'>
+                         <input type = 'text' id = 'changeRoomInput' class="form-control" placeholder = "Room name"><br>
+                         <input type = 'button' value = 'Enter or create room' id = 'changeRoomButton' class="btn btn-success">
+                    </form>
+                 </div>
+            </div>
+        </div>
+        <script src = '/socket.io/socket.io.js'></script>
+        <script src = 'javascripts/bundle.js'></script>   
+    </body>
+</html>
