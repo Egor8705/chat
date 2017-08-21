@@ -47,7 +47,6 @@ const Countries = serverModel.countries;
         socket.on('create and enter room from client',(data) => {
              socket.leave(data.leaveRoom);
              socket.join(data.newRoom);
-             console.log(data.newRoom);
              
              if (!serverModel.rooms.some((room) => {
                 return room === data.newRoom;
